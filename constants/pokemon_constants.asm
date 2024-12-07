@@ -67,9 +67,9 @@
 	const SEEL               ; $3A
 	const DIGLETT            ; $3B
 	const TAUROS             ; $3C
-	const TYPLOSION          ; $3D - New Mon
-	const FERALIGATR         ; $3E - New Mon
-	const MEGANIUM		     ; $3F - New Mon
+	const MEGANIUM           ; $3D - New Mon
+	const TYPHLOSION         ; $3E - New Mon
+	const FERALIGATR		 ; $3F - New Mon
 	const FARFETCHD          ; $40
 	const VENONAT            ; $41
 	const DRAGONITE          ; $42

@@ -68,6 +68,14 @@ PreBattleOptions:
 	db   "BATTLE"
 	next "EXIT@"
 
+TrainerData:
+	db $03 ; Trainer class (e.g., Lass)
+	db $02 ; Trainer mon set (e.g., Trainer set 2, ensure bit 7 is clear)
+; Unused
+	db $FF, 66, TAUROS, 67, EXEGGUTOR, 68, ARCANINE, 69, BLASTOISE, 70, GYARADOS, 0
+	db $FF, 66, TAUROS, 67, EXEGGUTOR, 68, ARCANINE, 69, VENUSAUR, 70, GYARADOS, 0
+	db $FF, 66, TAUROS, 67, EXEGGUTOR, 68, ARCANINE, 69, CHARIZARD, 70, GYARADOS, 0
+
 
 RandomBattle:
 .loop
@@ -95,7 +103,7 @@ RandomBattle:
 
 	; Give the player a random level 50 Pokemon.
     call PrepRandomPokemon
-    ld a, SHUCKLE ; for testing
+    ld a, FERALIGATR ; for testing
 	ld [wCurPartySpecies], a
 	ld a, 50
 	ld [wCurEnemyLevel], a
@@ -106,8 +114,34 @@ RandomBattle:
 
 	; Fight against a random level 50 Pokemon.
 	call PrepRandomPokemon
-    ld a, SHUCKLE ; for testing
+    ld a, FERALIGATR ; for testing
 	ld [wCurOpponent], a
+	ld a, 1
+	ld [wIsTrainerBattle], a
+; Define arbitrary trainer data
+
+; Prepare for EngageMapTrainer
+	ld hl, TrainerData         ; Point to our arbitrary trainer data
+	ld de, wMapSpriteExtraData ; Destination: wMapSpriteExtraData
+	ld bc, 2                   ; Size of trainer data (2 bytes)
+	call CopyTrainerDataLoop
+
+	ld a, $01                  ; Set wSpriteIndex to 1 (points to the first trainer)
+	ld [wSpriteIndex], a
+
+	; Call EngageMapTrainer
+	call EngageMapTrainer
+	ld a, $03                ; Arbitrary trainer class (e.g., Lass)
+    ld [wEngagedTrainerClass], a
+    ld a, $01                ; Set wIsTrainerBattle to indicate a trainer battle
+    ld [wIsTrainerBattle], a
+    ld a, $02                ; Arbitrary trainer set (e.g., Trainer set 2)
+    ld [wEngagedTrainerSet], a
+	call InitBattleEnemyParameters
+
+	; EngageMapTrainer will now process the trainer data from TrainerData.
+
+
 
 
 	predef InitOpponent
@@ -126,3 +160,14 @@ PrepRandomPokemon:
 	jr nc, PrepRandomPokemon ; If A >= 151, redo
 	add 1                 ; Shift range to 1–151
 	ret
+
+CopyTrainerDataLoop:
+	ld a, [hl]                 ; Load a byte from TrainerData
+	ld [de], a                 ; Store it in wMapSpriteExtraData
+	inc hl                     ; Advance source pointer
+	inc de                     ; Advance destination pointer
+	dec bc                     ; Decrement byte count
+	ld a, b                    ; Check if BC == 0
+	or c
+	jr nz, CopyTrainerDataLoop ; Repeat until all bytes are copied 
+	ret 
