@@ -151,5 +151,9 @@ MonPartyData:
 	nybble ICON_SNAKE     ; Dragonite
 	nybble ICON_MON       ; Mewtwo
 	nybble ICON_MON       ; Mew
+	nybble ICON_GRASS     ; Meganium
+	nybble ICON_MON       ; Typhlosion
+	nybble ICON_WATER     ; Feraligatr
+	nybble ICON_BIRD      ; Murkrow
 	nybble ICON_BUG       ; Shuckle
 	end_nybble_array NUM_POKEMON

@@ -31,7 +31,7 @@ PokedexEntryPointers:
 	dw PinsirDexEntry
 	dw TangelaDexEntry
 	dw ShuckleDexEntry
-	dw MissingNoDexEntry
+	dw MurkrowDexEntry
 	dw GrowlitheDexEntry
 	dw OnixDexEntry
 	dw FearowDexEntry
@@ -60,9 +60,9 @@ PokedexEntryPointers:
 	dw SeelDexEntry
 	dw DiglettDexEntry
 	dw TaurosDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
+	dw MeganiumDexEntry
+	dw TyphlosionDexEntry
+	dw FeraligatrDexEntry
 	dw FarfetchdDexEntry
 	dw VenonatDexEntry
 	dw DragoniteDexEntry
@@ -414,6 +414,13 @@ ShuckleDexEntry:
 	text_far _ShuckleDexEntry
 	text_end
 
+MurkrowDexEntry:
+	db "DARKNESS@"
+	db 1,8
+	dw 50
+	text_far _MurkrowDexEntry
+	text_end
+
 GrowlitheDexEntry:
 	db "PUPPY@"
 	db 2,4
@@ -587,6 +594,27 @@ TaurosDexEntry:
 	db 4,7
 	dw 1950
 	text_far _TaurosDexEntry
+	text_end
+
+MeganiumDexEntry:
+	db "HERB@"
+	db 5,11
+	dw 2220
+	text_far _MeganiumDexEntry
+	text_end
+
+TyphlosionDexEntry:
+	db "VOLCANO@"
+	db 5,7
+	dw 1750
+	text_far _TyphlosionDexEntry
+	text_end
+
+FeraligatrDexEntry:
+	db "BIG JAW@"
+	db 7,7
+	dw 1960
+	text_far _FeraligatrDexEntry
 	text_end
 
 FarfetchdDexEntry:

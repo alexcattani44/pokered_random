@@ -41,7 +41,7 @@ EvosMovesPointerTable:
 	dw PinsirEvosMoves
 	dw TangelaEvosMoves
 	dw ShuckleEvosMoves
-	dw MissingNo20EvosMoves
+	dw MurkrowEvosMoves
 	dw GrowlitheEvosMoves
 	dw OnixEvosMoves
 	dw FearowEvosMoves
@@ -70,9 +70,9 @@ EvosMovesPointerTable:
 	dw SeelEvosMoves
 	dw DiglettEvosMoves
 	dw TaurosEvosMoves
-	dw MissingNo3DEvosMoves
-	dw MissingNo3EEvosMoves
-	dw MissingNo3FEvosMoves
+	dw MeganiumEvosMoves
+	dw TyphlosionEvosMoves
+	dw FeraligatrEvosMoves
 	dw FarfetchdEvosMoves
 	dw VenonatEvosMoves
 	dw DragoniteEvosMoves
@@ -555,10 +555,15 @@ ShuckleEvosMoves:
 	db 14, SLAM
 	db 0
 
-MissingNo20EvosMoves:
+MurkrowEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 9, LEER
+	db 15, FURY_ATTACK
+	db 22, MIRROR_MOVE
+	db 29, DRILL_PECK
+	db 36, AGILITY
 	db 0
 
 GrowlitheEvosMoves:
@@ -875,22 +880,41 @@ TaurosEvosMoves:
 	db 51, TAKE_DOWN
 	db 0
 
-MissingNo3DEvosMoves:
+MeganiumEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 7, LEECH_SEED
+	db 13, VINE_WHIP
+	db 22, POISONPOWDER
+	db 30, RAZOR_LEAF
+	db 43, GROWTH
+	db 55, SLEEP_POWDER
+	db 65, SOLARBEAM
 	db 0
 
-MissingNo3EEvosMoves:
+TyphlosionEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 9, EMBER
+	db 15, LEER
+	db 24, RAGE
+	db 33, SLASH
+	db 42, FLAMETHROWER
+	db 56, FIRE_SPIN
 	db 0
 
-MissingNo3FEvosMoves:
+FeraligatrEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 8, BUBBLE
+	db 15, WATER_GUN
+	db 24, BITE
+	db 31, WITHDRAW
+	db 42, SKULL_BASH
+	db 52, HYDRO_PUMP
 	db 0
 
 FarfetchdEvosMoves:

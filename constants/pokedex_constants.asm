@@ -155,6 +155,10 @@
 	const DEX_DRAGONITE  ; 149
 	const DEX_MEWTWO     ; 150
 	const DEX_MEW        ; 151
-	const DEX_SHUCKLE	 ; 152
+	const DEX_MEGANIUM	 ; 152 - New pokemon below by Alex Cattani
+	const DEX_TYPHLOSION ; 153
+	const DEX_FERALIGATR ; 154
+	const DEX_MURKROW	 ; 155
+	const DEX_SHUCKLE	 ; 156
 
 DEF NUM_POKEMON EQU const_value - 1

@@ -37,8 +37,8 @@
 	const BLASTOISE          ; $1C
 	const PINSIR             ; $1D
 	const TANGELA            ; $1E
-	const SHUCKLE            ; $1F
-	const_skip               ; $20
+	const SHUCKLE            ; $1F - New Mon
+	const MURKROW            ; $20 - New Mon
 	const GROWLITHE          ; $21
 	const ONIX               ; $22
 	const FEAROW             ; $23
@@ -67,9 +67,9 @@
 	const SEEL               ; $3A
 	const DIGLETT            ; $3B
 	const TAUROS             ; $3C
-	const_skip               ; $3D
-	const_skip               ; $3E
-	const_skip               ; $3F
+	const TYPLOSION          ; $3D - New Mon
+	const FERALIGATR         ; $3E - New Mon
+	const MEGANIUM		     ; $3F - New Mon
 	const FARFETCHD          ; $40
 	const VENONAT            ; $41
 	const DRAGONITE          ; $42

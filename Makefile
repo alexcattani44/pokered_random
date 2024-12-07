@@ -32,7 +32,7 @@ else
 SHA1 := sha1sum
 endif
 
-RGBDS := /mnt/host/c/Users/Alexander/Desktop/Code/Projects/pokered/
+RGBDS := /mnt/host/c/Users/Alexander/Desktop/Code/Projects/pokered_random/
 RGBASM  := $(RGBDS)rgbasm.exe
 RGBFIX  := $(RGBDS)rgbfix.exe
 RGBGFX  := $(RGBDS)rgbgfx.exe

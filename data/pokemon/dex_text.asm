@@ -308,6 +308,16 @@ _ShuckleDexEntry::
 	next "completely still."
 	dex
 
+_MurkrowDexEntry::
+	text "Feared and loathed"
+	next "by many, it is"
+	next "believed to bring"
+
+	page "misfortune to all"
+	next "those who see it"
+	next "at night."
+	dex
+
 _GrowlitheDexEntry::
 	text "Very protective"
 	next "of its territory."
@@ -556,6 +566,36 @@ _TaurosDexEntry::
 	page "while whipping its"
 	next "body with its"
 	next "long tails"
+	dex
+
+_MeganiumDexEntry::
+	text "The aroma that"
+	next "rises from its"
+	next "petals contains a"
+
+	page "substance that"
+	next "calms aggressive"
+	next "feelings."
+	dex
+
+_TyphlosionDexEntry::
+	text "If its rage peaks"
+	next "it becomes so hot"
+	next "that anything"
+
+	page "that touches it"
+	next "will go up in"
+	next "flames."
+	dex
+
+_FeraligatrDexEntry::
+	text "When it bites"
+	next "with its massive"
+	next "jaws, it shakes"
+
+	page "its head and"
+	next "savagely tears"
+	next "its victims up."
 	dex
 
 _FarfetchdDexEntry::

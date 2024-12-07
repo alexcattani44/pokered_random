@@ -152,5 +152,9 @@ MonsterPalettes:
 	db PAL_BROWNMON  ; DRAGONITE
 	db PAL_MEWMON    ; MEWTWO
 	db PAL_MEWMON    ; MEW
+	db PAL_GREENMON  ; MEGANIUM
+	db PAL_REDMON    ; TYPHLOSION
+	db PAL_BLUEMON   ; FERALIGATR
+	db PAL_YELLOWMON ; MURKROW (test yellow, if not gray)
 	db PAL_REDMON	 ; SHUCKLE
 	assert_table_length NUM_POKEMON + 1
