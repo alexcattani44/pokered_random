@@ -32,7 +32,8 @@ else
 SHA1 := sha1sum
 endif
 
-RGBDS := /mnt/host/c/Users/Alexander/Desktop/Code/Projects/pokered_random/
+### Set where RGBDS is installed on machine
+RGBDS := /
 RGBASM  := $(RGBDS)rgbasm.exe
 RGBFIX  := $(RGBDS)rgbfix.exe
 RGBGFX  := $(RGBDS)rgbgfx.exe
@@ -181,6 +182,7 @@ gfx/trade/game_boy.2bpp: tools/gfx += --remove-duplicates
 
 %.png: ;
 
+### Did not work for me, manually converted with spriteconv.bat
 %.2bpp: %.png
 	$(RGBGFX) $(rgbgfx) -o $@ $<
 	$(if $(tools/gfx),\

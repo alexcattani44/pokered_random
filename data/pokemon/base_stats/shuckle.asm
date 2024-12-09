@@ -1,7 +1,7 @@
 	db DEX_SHUCKLE ; pokedex id
 
 	db 20, 10, 230,  5,  10
-	;   hp  atk  def  spd  spc
+	;  hp  atk  def  spd  spc
 
 	db BUG, ROCK ; type
 	db 190 ; catch rate
@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/shuckle.pic", 0, 1 ; sprite dimensions
 	dw ShucklePicFront, ShucklePicBack
 
-	db CONSTRICT, WITHDRAW, DOUBLE_EDGE, TOXIC ; level 1 learnset
+	db POUND, WITHDRAW, DOUBLE_EDGE, TOXIC ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
